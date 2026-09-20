@@ -1,0 +1,24 @@
+{
+  "name": "hub-de-leitura-teste-1-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "cypress open"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everson-sousa/hub-de-leitura-teste-1-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/everson-sousa/hub-de-leitura-teste-1-ui/issues"
+  },
+  "homepage": "https://github.com/everson-sousa/hub-de-leitura-teste-1-ui#readme",
+  "dependencies": {
+    "cypress": "^16.1.0"
+  }
+}
