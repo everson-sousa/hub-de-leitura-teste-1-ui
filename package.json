@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "cypress open"
-},
+    "start": "cypress open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/everson-sousa/hub-de-leitura-teste-1-ui.git"
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/everson-sousa/hub-de-leitura-teste-1-ui#readme",
   "dependencies": {
+    "@faker-js/faker": "^10.6.0",
     "cypress": "^16.1.0"
   }
 }
