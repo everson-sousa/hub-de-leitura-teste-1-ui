@@ -1,0 +1,11 @@
+[
+    {
+        "Livro": "O Ladrão de Raios",
+        "categoria": "fantasia"
+    },
+
+    {
+        "Livro": "Dom Quixote",
+        "categoria": "romance"
+    }
+]

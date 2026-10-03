@@ -17,11 +17,11 @@ describe('Funcionalidade: Cadastro no Hub de leitura', () => {
         cy.url().should('include', 'dashboard')
         
     });
-    it.only('Deve preencher cadastro costumizado', () => {
+    it('Deve preencher cadastro costumizado', () => {
         let email = `teste${Date.now()}@teste.com`
         let nome = faker.person.fullName({sex: 'male'})
         cy.preencherCadastro(
-            'Everson Sousa',
+            nome,
             email,
             '11962839201',
             'Senha1234',

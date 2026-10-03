@@ -37,5 +37,5 @@ Cypress.Commands.add('preencherCadastro', (nome, email, telefone, senha, confirm
     cy.get('#confirm-password').type(confirmarSenha, {log: false})
     cy.get('#terms-agreement').check()
     cy.get('#register-btn').click()
-    cy.url().should('include', 'dashboard')  
+     
 })

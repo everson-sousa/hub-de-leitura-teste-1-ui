@@ -1,4 +1,5 @@
 ///<reference types = 'cypress'/>
+import user from "../fixtures/user.json"
  describe('Funcionalidade: Login', () => {
     beforeEach(() => {
         cy.visit('login.html')
@@ -19,7 +20,12 @@
        cy.url().should('include', 'dashboard')
         
     });
-    it.only('Deve efetuar login com sucesso, usando comando costumizado', () => {
+    it('Deve efetuar login com sucesso, usando comando costumizado', () => {
        cy.login('usuario@teste.com', 'user123') 
     });
- });   
+    it('Deve efetuar login com sucesso buscando massa de dados', () => {
+        cy.login(user.email, user.senha) 
+
+        
+    });
+ });
