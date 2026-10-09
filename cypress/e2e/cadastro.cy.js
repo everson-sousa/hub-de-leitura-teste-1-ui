@@ -1,10 +1,11 @@
 
 ///<reference types = 'cypress'/>
 import { faker } from '@faker-js/faker';
+import cadastroPages from '../support/pages/cadastro-pages';
 
 describe('Funcionalidade: Cadastro no Hub de leitura', () => {
     beforeEach(() => {
-            cy.visit('register.html')
+            cadastroPages.visitarPaginaCadastro()
         });
     it('Deve efetuar cadastro com sucesso', () => {        
         cy.get('#name').type('Everson Almeida')
@@ -43,6 +44,11 @@ describe('Funcionalidade: Cadastro no Hub de leitura', () => {
         cy.url().should('include', 'dashboard')
         cy.get('#user-name').should('contain', nome)
         
+    });
+    it.only('Deve fazer cadastro com sucesso - Usando Page Object', () => {
+        cadastroPages.preencherCadastro('', 'teste164@gmail.com', '11987654321', 'senhaxyz', 'senhaxyz')
+        cy.get(':nth-child(1) > .invalid-feedback').should('contain', 'Nome deve ter pelo menos 2 caracteres')
+        //cy.url().should('include', 'dashboard')
     });
    
 });
